@@ -28,7 +28,7 @@ var upload = multer({ storage: storage });
 // 实例化路由对象
 const app = express();
 
-app.use(express.static("uploads"));
+app.use(express.static("public"));
 
 // 使用body-parser解析post的数据
 // parse application/x-www-form-urlencoded

@@ -16,18 +16,18 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-      .wrap{
+      .wrap {
         position: fixed;
-        left:0;
-        top:0;
-        width:100%;
-        height:100%;
-        background:url('images/bg03.jpg') center bottom no-repeat;
-        overflow:auto;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url("images/bg03.jpg") center bottom no-repeat;
+        overflow: auto;
       }
 
-      .navbar-brand{
-        padding:10px 15px;
+      .navbar-brand {
+        padding: 10px 15px;
       }
       .logout {
         font-weight: 900;
@@ -45,113 +45,117 @@
       }
       #my-table td {
         text-align: center;
-        line-height:80px;
+        line-height: 80px;
         padding: 0;
-        padding:10px;
+        padding: 10px;
       }
       td img {
-        width:80px;
-        height:80px;
+        width: 80px;
+        height: 80px;
       }
       .username {
         font-weight: 900;
         color: hotpink;
         background-color: yellowgreen;
       }
-      .pagination{
-         margin:0px;
-         padding:0px;
-         font-size:0;
-         line-height:1;
+      .pagination {
+        margin: 0px;
+        padding: 0px;
+        font-size: 0;
+        line-height: 1;
       }
-      .pagination li{
-        display:inline-block;
-        font-size:14px;
+      .pagination li {
+        display: inline-block;
+        font-size: 14px;
       }
-      .mp15{
-        margin-top:15px;
+      .mp15 {
+        margin-top: 15px;
       }
-      .table{
-        margin-bottom:0;
+      .table {
+        margin-bottom: 0;
       }
-      .table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
-        border-bottom-width:1px;
+      .table-bordered > thead > tr > td,
+      .table-bordered > thead > tr > th {
+        border-bottom-width: 1px;
       }
-      .page-title{
-        font-size:16px;
-        font-weight:bold;
+      .page-title {
+        font-size: 16px;
+        font-weight: bold;
       }
-     
     </style>
   </head>
 
   <body>
     <div class="wrap">
       <nav class="navbar  navbar-inverse navbar-static-top">
-          <div class="container">      
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mymenu">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
-            </div>          
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#mymenu"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/logo.png"/></a>
           </div>
+        </div>
       </nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-heading clearfix">
-              <div class="row">
-              <div class="col-md-6 page-title">英雄列表</div>
-              <div class="col-md-6 text-right">当前位置：首页</div>
-            </div>
-            </div>
-            <div class="panel-body">
-               <!-- action 不写 就是当前页面 method 不写 就是 get -->
-               <div class="row">
-                  <div class="col-md-9">
-                  </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading clearfix">
+                <div class="row">
+                  <div class="col-md-6 page-title">英雄列表</div>
+                  <div class="col-md-6 text-right">当前位置：首页</div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <!-- action 不写 就是当前页面 method 不写 就是 get -->
+                <div class="row">
+                  <div class="col-md-9"></div>
                   <div class="col-md-3">
-                    <a href="./add.html" class="btn btn-success pull-right">新增</a>                    
+                    <a href="./add.html" class="btn btn-success pull-right"
+                      >新增</a
+                    >
                   </div>
-
                 </div>
 
-              <table id="my-table" class="table table-bordered mp15">
-                <thead>
-                  <tr>
-                    <th width="25%">头像</th>
-                    <th width="25%">姓名</th>
-                    <th width="25%">技能</th>                    
-                    <th width="25%">操作</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><img src="./uploads/盖伦.png" alt="" /></td>
-                    <td>盖伦</td>
-                    <td>躲草丛</td>                 
-                    <td>
-                      <a href="./edit.html" class="btn btn-primary btn-edit">编辑</a>
-                      <a  class="btn btn-danger btn-delete">删除</a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                <table id="my-table" class="table table-bordered mp15">
+                  <thead>
+                    <tr>
+                      <th width="25%">头像</th>
+                      <th width="25%">姓名</th>
+                      <th width="25%">技能</th>
+                      <th width="25%">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="./uploads/盖伦.png" alt="" /></td>
+                      <td>盖伦</td>
+                      <td>躲草丛</td>
+                      <td>
+                        <a href="./edit.html" class="btn btn-primary btn-edit"
+                          >编辑</a
+                        >
+                        <a class="btn btn-danger btn-delete">删除</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="panel-footer text-center"></div>
             </div>
-            <div class="panel-footer text-center">
-              
-            </div>
-
           </div>
         </div>
       </div>
-    </div>
     </div>
   </body>
 </html>
@@ -160,16 +164,29 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/js/template-web.js"></script>
-<script type="text/html" id="cq">
-  {{each list}}
+<!-- 定义模板 -->
+<script type="text/html" id="hero">
+  {{ each data }}
   <tr>
-      <td>{{$value.heroName}}</td>
-      <td>{{$value.skillName}}</td>
-      <td><img src="{{$value.heroIcon}}" alt=""></td>
-      <td data-id="{{$value._id}}">
-        <button  class="btn btn-success btn-edit">编辑🍞</button>
-        <button  class="btn btn-danger  btn-delete">删除👍</button>
-      </td>
-    </tr>
-    {{/each }}
+    <td><img src="{{$value.icon}}" alt="" /></td>
+    <td>{{$value.name}}</td>
+    <td>{{$value.skill}}</td>
+    <td>
+      <a href="./edit.html" class="btn btn-primary btn-edit">编辑</a>
+      <a  class="btn btn-danger btn-delete">删除</a>
+    </td>
+  </tr>
+  {{/each}}
+</script>
+<script>
+  // 列表数据获取
+  $(function() {
+    $.ajax({
+      url: "/list",
+      type: "get",
+      success(backData) {
+        $('tbody').html(template('hero',backData))
+      }
+    });
+  });
 </script>

@@ -15,7 +15,7 @@ const db = require("./db/db");
 // 设置上传文件路径及文件名称
 var storage = multer.diskStorage({
   destination: function(req, file, cb) {
-    cb(null, "uploads");
+    cb(null, "public/uploads/");
   },
   filename: function(req, file, cb) {
     const type = file.originalname.split(".")[1];
@@ -48,7 +48,8 @@ app.get("/list", (req, res) => {
 app.post("/add", upload.single("icon"), (req, res) => {
   // 获取参数
   const { name, skill } = req.body;
-  const icon = req.file.path;
+  console.log(req.file)
+  const icon = 'uploads/' + req.file.filename;
   db.addHero({
     name,
     skill,
@@ -117,7 +118,7 @@ app.get("/search", (req, res) => {
 // 编辑英雄 有参数 有文件 post请求 参数类型 form-data
 app.post("/edit", upload.single("icon"), (req, res) => {
   const { id, name, skill } = req.body;
-  const icon = req.file.path;
+  const icon = 'uploads/' + req.file.filename;
   db.editHero({
     id,
     name,
